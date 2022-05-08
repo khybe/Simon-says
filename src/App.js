@@ -1,4 +1,11 @@
 import { useState, useEffect } from "react";
+import useSound from "use-sound";
+
+import greenSound from "../src/sounds/green.mp3";
+import redSound from "../src/sounds/red.mp3";
+import blueSound from "../src/sounds/blue.mp3";
+import yellowSound from "../src/sounds/yellow.mp3";
+import wrongSound from "../src/sounds/wrong.mp3";
 
 import ColorCard from "./components/ColorCard";
 import timeout from "../src/utils/utils";
@@ -22,6 +29,14 @@ function App() {
 
   const [flashColor, setFlashColor] = useState("");
 
+  const [playGreenSound] = useSound(greenSound);
+  const [playRedSound] = useSound(redSound);
+  const [playBlueSound] = useSound(blueSound);
+  const [playYellowSound] = useSound(yellowSound);
+  const [playWrongSound] = useSound(wrongSound);
+
+  const [playSound, setPlaySound] = useState(null);
+
   const startHandler = () => {
     setIsOn(true);
   };
@@ -43,6 +58,31 @@ function App() {
       const copyColors = [...play.displayColors];
       copyColors.push(newColor);
       setPlay({ ...play, displayColors: copyColors });
+
+      const soundOnDisplayColor = async () => {
+        switch (newColor) {
+          case "green":
+            await timeout(1000);
+            setPlaySound(playGreenSound());
+            break;
+          case "red":
+            await timeout(1000);
+            setPlaySound(playRedSound());
+            break;
+          case "blue":
+            await timeout(1000);
+            setPlaySound(playBlueSound());
+            break;
+          case "yellow":
+            await timeout(1000);
+            setPlaySound(playYellowSound());
+            break;
+          default:
+            setPlaySound(null);
+        }
+      };
+
+      soundOnDisplayColor();
     }
   }, [isOn, play.isDisplay]);
 
@@ -79,6 +119,23 @@ function App() {
   const cardClickHandler = async (color) => {
     console.log(color);
 
+    switch (color) {
+      case "green":
+        setPlaySound(playGreenSound());
+        break;
+      case "red":
+        setPlaySound(playRedSound());
+        break;
+      case "blue":
+        setPlaySound(playBlueSound());
+        break;
+      case "yellow":
+        setPlaySound(playYellowSound());
+        break;
+      default:
+        setPlaySound(null);
+    }
+
     if (!play.isDisplay && play.userPlay) {
       const copyUserColors = [...play.userColors];
       const lastColor = copyUserColors.pop();
@@ -100,10 +157,15 @@ function App() {
       } else {
         await timeout(500);
         setPlay({ ...initPlay, scores: play.displayColors.length });
+        setPlaySound(playWrongSound());
       }
       await timeout(500);
       setFlashColor("");
     }
+  };
+
+  const closeHandler = () => {
+    setIsOn(false);
   };
 
   return (
@@ -120,6 +182,14 @@ function App() {
               ></ColorCard>
             ))}
         </div>
+        {isOn && !play.isDisplay && !play.userPlay && play.scores && (
+          <div className="lost">
+            <h2>Uh oh! You lost :(</h2>
+            <p>Better luck next time :)</p>
+            <p>Your score is: {play.scores}</p>
+            <button onClick={closeHandler}>Close</button>
+          </div>
+        )}
         {!isOn && !play.score && (
           <button className="startButton" onClick={startHandler}>
             Start
