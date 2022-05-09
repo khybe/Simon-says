@@ -1,5 +1,5 @@
-.App-header {
-  background-color: #6e7be1;
+.bodyWrapper {
+  background-color: #131f75;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,6 +7,19 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header p {
+  border: 0.5px solid gray;
+  padding: 0.5rem 2rem;
+  border-radius: 12px;
+  background-color: rgb(24, 24, 25);
 }
 
 .App-link {
@@ -33,7 +46,8 @@
 
 .startButton {
   position: absolute;
-  padding: 0.5rem 2rem;
+  top: 62.4%;
+  padding: 0.5rem 2.5rem;
   font-size: 25px;
   font-weight: bold;
   border-radius: 12px;
@@ -48,6 +62,7 @@
 
 .score {
   position: absolute;
+  top: 59%;
   width: 100px;
   height: 100px;
   background-color: rgb(18, 5, 5);

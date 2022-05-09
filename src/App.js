@@ -170,7 +170,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="bodyWrapper">
+        <div className="header">
+          <h1>Simon Says Game</h1>
+          <p>How long a sequence can you remember?</p>
+        </div>
         <div className="cardWrapper">
           {colorList &&
             colorList.map((v, i) => (
