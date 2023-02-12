@@ -185,6 +185,14 @@ function App() {
                 onClick={() => cardClickHandler(v)}
               ></ColorCard>
             ))}
+          {!isOn && !play.score && (
+            <button className="startButton" onClick={startHandler}>
+              Start
+            </button>
+          )}
+          {isOn && (play.isDisplay || play.userPlay) && (
+            <div className="score">{play.scores}</div>
+          )}
         </div>
         {isOn && !play.isDisplay && !play.userPlay && play.scores && (
           <div className="lost">
@@ -194,17 +202,19 @@ function App() {
             <button onClick={closeHandler}>Close</button>
           </div>
         )}
-        {!isOn && !play.score && (
-          <button className="startButton" onClick={startHandler}>
-            Start
-          </button>
-        )}
-        {isOn && (play.isDisplay || play.userPlay) && (
-          <div className="score">{play.scores}</div>
-        )}
       </header>
     </div>
   );
 }
 
 export default App;
+
+// 1# Conditionally playing sounds.
+
+// 2# Conditionallly displaying and hiding components or elements.
+
+// 3# Using Async and await.
+
+// 4# Creating and using timeout component (i.e, whitin utils folder).
+
+// 5# Flashing an element based on a condition.

@@ -1,6 +1,7 @@
 .bodyWrapper {
   background-color: #131f75;
   min-height: 100vh;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,12 +34,13 @@
 }
 
 .cardWrapper {
+  position: relative;
   display: flex;
   width: 450px;
   flex-wrap: wrap;
   justify-content: center;
   width: 420px;
-  height: 420px;
+  height: 415px;
   background-color: rgb(24, 24, 25);
   border-radius: 25px;
   padding: 1rem;
@@ -46,7 +48,7 @@
 
 .startButton {
   position: absolute;
-  top: 62.4%;
+  top: 45%;
   padding: 0.5rem 2.5rem;
   font-size: 25px;
   font-weight: bold;
@@ -62,7 +64,7 @@
 
 .score {
   position: absolute;
-  top: 59%;
+  top: 39.5%;
   width: 100px;
   height: 100px;
   background-color: rgb(18, 5, 5);
@@ -138,4 +140,31 @@
   background-color: black;
   color: white;
   border: 2px solid white;
+}
+
+@media screen and (max-width: 450px) {
+  .colorCard {
+    width: 160px;
+    height: 170px;
+  }
+
+  .cardWrapper {
+    min-width: 320px;
+    height: 360px;
+  }
+
+  .startButton {
+    top: 44%;
+  }
+
+  .score {
+    top: 37.5%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .colorCard {
+    width: 140px;
+    height: 172px;
+  }
 }
