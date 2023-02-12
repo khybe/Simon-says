@@ -143,14 +143,18 @@
 }
 
 @media screen and (max-width: 450px) {
-  .colorCard {
-    width: 165px;
-    height: 170px;
+  .bodyWrapper {
+    overflow-x: hidden;
   }
 
   .cardWrapper {
     min-width: 320px;
     height: 360px;
+  }
+
+  .colorCard {
+    width: 165px;
+    height: 170px;
   }
 
   .startButton {
