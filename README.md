@@ -4,7 +4,11 @@ Welcome to the "Simon-says" repository! This project was undertaken as a practic
 
 ## Project Overview
 
-The "Simon Says" project entails the development of a digital Simon Says game. In this classic game, users are presented with a sequence of colors that they must replicate in the correct order. With each successful replication, the sequence becomes progressively longer, providing an ever-increasing challenge.
+The "Simon-says" project entails the development of a digital Simon Says game. In this classic game, users are presented with a sequence of colors that they must replicate in the correct order. With each successful replication, the sequence becomes progressively longer, providing an ever-increasing challenge.
+
+## Try the Game!
+
+You can play the Simon Says game right now by visiting the following link: [Play Simon Says](https://simon-says-orcin.vercel.app/)
 
 ## Commit History
 
