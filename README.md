@@ -1,4 +1,4 @@
-# Simon Says Game Project
+# Simon Says Game Practice Project
 
 Welcome to the "Simon-says" repository! This project was undertaken as a practice endeavor to solidify my knowledge of front-end development, with a strong focus on JavaScript. The primary goal of this project was to create a digital version of the classic Simon Says memory game, helping users enhance their memory and cognitive skills in an engaging manner.
 
