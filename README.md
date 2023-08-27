@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Simon Says Game Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the "Simon-says" repository! This project was undertaken as a practice endeavor to solidify my knowledge of front-end development, with a strong focus on JavaScript. The primary goal of this project was to create a digital version of the classic Simon Says memory game, helping users enhance their memory and cognitive skills in an engaging manner.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The "Simon Says" project entails the development of a digital Simon Says game. In this classic game, users are presented with a sequence of colors that they must replicate in the correct order. With each successful replication, the sequence becomes progressively longer, providing an ever-increasing challenge.
 
-### `npm start`
+## Commit History
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Feb 12, 2023
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Disabled horizontal scrolling for devices with a maximum width of 450px.
+- Increased the width of the `colorCard` element by 5px for devices with a maximum width of 450px.
+- Restructured the layout by moving the start button and score to the `card wrapper`, positioning them relative to the instruction text.
 
-### `npm test`
+### Aug 21, 2022
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Updated `index.html`.
 
-### `npm run build`
+### May 9, 2022
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Added a [game description](game-description. txt) to provide context and information about the Simon Says game.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### May 8, 2022
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Implemented complete sound logic for displaying colors when a user clicks a color.
+- Completed flash logic for displaying colors and when a user clicks a color.
 
-### `npm run eject`
+### May 5, 2022
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Completed the implementation of the [`ColorCard`](src/components/ColorCard.js) component and the start button.
+- Initialized the project using the Create React App.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Additional Resources
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+For additional resources on front-end development and JavaScript, you may find the following links helpful:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [MDN Web Docs](https://developer.mozilla.org/): Comprehensive documentation on web technologies.
+- [React Documentation](https://reactjs.org/docs/getting-started.html): Official documentation for the React framework.
+- [JavaScript MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript): In-depth information about JavaScript.
 
-## Learn More
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To experience the Simon Says game on your local machine:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone this repository.
+2. Navigate to the project directory: `cd Simon-says`.
+3. Install the required dependencies: `npm install`.
+4. Start the development server: `npm start`.
+5. Open your web browser and go to `http://localhost:3000` to play the game.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is open-source and is available under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### Analyzing the Bundle Size
+Feel free to explore the commit history to understand the evolution of the project and how different features were added. If you have any questions or suggestions, don't hesitate to create an issue.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Enjoy playing Simon Says and have fun testing your memory skills!**
